@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset = 'utf-8'>
+<head>
+	<title>- -</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+<link rel="stylesheet" type="text/css" href="../static/css/css.css">
+<body>
+	<div class="main">
+		{% for i in mes %}
+		<p class="texp">{{i.time}} </p><br><p class="texp">{{i.name}}</p>  <br> <div class="avi">
+		{{i.content}}
+		</div><br>
+		{% endfor %}
+		<div class='cont'>
+			<form action="/get/" method="get" class="gets">
+			name:<input type="text" name="namea">
+			content:<input type="text" name="contenta">
+			<input type="submit" value="提交" class="bto">
+			</form>
+			<form action="/dels/" method="get" class="deled">
+				<input type="submit" value="清空" class="bto">
+			</form>
+			<br>
+		</div>
+	</div>
+</body>
+</html>
